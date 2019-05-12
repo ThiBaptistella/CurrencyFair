@@ -71,24 +71,19 @@
   }
   
   input {
-    font-size: 1.5em;
-    font-family: inherit;
+    font-size: 15px;
+    color: #67bae0;
     -webkit-appearance: none;
-    border-radius: 0;
-    padding: 0;
-    cursor: text;
-
+    border-radius: 5px;
     width: 100%;
     border: 1px solid #cccccc;
     height: 80px;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    background-color: #ffffff;
   }
   
   input:focus {
     outline: 0;
-    border-bottom: 1px solid #666;
+    border: 1px solid #67bbe0;
+    background-color: #eaf9ff73;
   }
   
   label {
