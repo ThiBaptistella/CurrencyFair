@@ -1,0 +1,13 @@
+.nav-container {
+    width: 100%;
+    height: 70px;
+    background-color: #32323c;
+}
+.navbar {
+    max-width: 978px;
+    margin: auto;
+}
+.logo {
+    max-width: 150px;
+    float: left;
+}

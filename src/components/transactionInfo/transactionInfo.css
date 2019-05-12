@@ -1,0 +1,43 @@
+.transactionInfo {
+    margin-left: 25%; 
+}
+.progress {
+  list-style-type: none;
+  padding: 25px;
+  overflow: hidden;
+}
+
+.progress li {
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    float: left;
+    color: #c3c5caf5;
+    text-align: left;
+    padding: 15px 55px;
+    text-decoration: none;
+    border-bottom: 3px solid #eaf9ff;
+}
+.progress li span {
+    font-size: 12px;
+    font-weight: 500;
+    display: block;
+}
+.active {
+    color: #67bbe0 !important;
+    border-bottom: 3px solid #67bbe0 !important;
+}
+.transaction-input {
+    padding: 25px;
+}
+.transaction-input h2 {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+}
+.transaction-input p {
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    color: #868686f5;
+}
