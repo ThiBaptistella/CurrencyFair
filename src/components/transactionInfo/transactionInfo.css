@@ -71,14 +71,26 @@
     transition: all 0.2s;
     touch-action: manipulation;
   }
-  
-  input {
+  #youSend {
     -webkit-appearance: none;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     border: 1px solid #cccccc;
     height: 80px;
     padding: 10px;
     font-size: large;
+    font-weight: 700;
+    border-bottom: none;
+  }
+  
+  #receiverGets {
+    -webkit-appearance: none;
+    border: 1px solid #cccccc;
+    height: 80px;
+    padding: 10px;
+    font-size: large;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     font-weight: 700;
   }
 

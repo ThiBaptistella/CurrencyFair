@@ -57,9 +57,6 @@ class TransactionForm extends Component {
                 </div>
             </div>
            
-    
-              
-         
             <div className="field">
               <button className="btn-next">Next</button>
             </div>
