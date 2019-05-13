@@ -41,14 +41,6 @@
     text-align: left;
     color: #868686f5;
 }
-/* .transaction-input .youSend {
-    width: 100%;
-    border: 1px solid #67bbe0;
-    height: 80px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background-color: #eaf9ff73;
-} */
 
 .btn-next {
     color: #ffffff;
@@ -71,13 +63,13 @@
   }
   
   input {
-    font-size: 15px;
-    color: #67bae0;
     -webkit-appearance: none;
     border-radius: 5px;
-    width: 100%;
     border: 1px solid #cccccc;
     height: 80px;
+    padding: 10px;
+    font-size: large;
+    font-weight: 700;
   }
   
   input:focus {
@@ -88,18 +80,22 @@
   
   label {
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-size: 16px;
+    font-weight: 500; 
+    color: #67bae0;
+    text-align: left;
+    position: absolute;
   }
   input:placeholder-shown + label {
     cursor: text;
-    max-width: 20%;
+    max-width: 27%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     transform-origin: left bottom;
-    transform: translate(0, 2.125rem) scale(1.5);
+    transform: translate(0, -1.875rem) scale(1);
     text-align: left;
-    margin: 4px;
+    padding: 10px;
   }
   ::-webkit-input-placeholder {
     opacity: 0;
@@ -110,7 +106,9 @@
   }
 input:not(:placeholder-shown) + label,
 input:focus + label {
-  transform: translate(0, 0) scale(1);
+  transform: translate(10px, -70px) scale(1);
   cursor: pointer;
+  font-size: 12px;
+  text-align: left;
+  padding: 0;
 }
-  

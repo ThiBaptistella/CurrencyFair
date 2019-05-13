@@ -30,10 +30,9 @@ class TransactionForm extends Component {
             </div>
                 
             <div class="field">
-                <input type="email" name="receiverGets" id="email" placeholder="jane.appleseed@example.com" />
-                <label for="email">Email</label>
+                <input type="text" name="receiverGets" id="receiverGets" placeholder="£1000" />
+                <label for="receiverGets">receiver gets</label>
             </div>
-            
             <button className="btn-next">Next</button>
           </form>
         );
