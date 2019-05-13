@@ -3,6 +3,8 @@ import Select from 'react-select';
 
 import "./transactionInfo.css";
 
+import Modal from '../modal/modal';
+
 const options = [
   { value: 'euro', label: 'Euro' },
   { value: 'dollar', label: 'Dollar' }
@@ -15,10 +17,20 @@ class TransactionForm extends Component {
             youSend: "",
             receiverGets: "",
             selectedOption: null,
+            isShowing: false
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     } 
-
+    openModalHandler = () => {
+      this.setState({
+          isShowing: true
+      });
+    }
+    closeModalHandler = () => {
+      this.setState({
+          isShowing: false
+      });
+    }
     handleChange = (selectedOption) => {
       this.setState({ selectedOption });
       console.log(`Option selected:`, selectedOption);
@@ -55,6 +67,19 @@ class TransactionForm extends Component {
                     <option value="saab">Dollar</option>
                   </select>
                 </div>
+            </div>
+
+            <div>
+            { this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null }
+
+<button className="open-modal-btn" onClick={this.openModalHandler}>Open Modal</button>
+
+<Modal
+    className="modal"
+    show={this.state.isShowing}
+    close={this.closeModalHandler}>
+        Maybe aircrafts fly very high because they don't want to be seen in plane sight?
+</Modal>
             </div>
            
             <div className="field">
