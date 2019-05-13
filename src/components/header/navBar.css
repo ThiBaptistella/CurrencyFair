@@ -2,6 +2,7 @@
     width: 100%;
     height: 70px;
     background-color: #32323c;
+    position: absolute;
 }
 .navbar {
     max-width: 978px;

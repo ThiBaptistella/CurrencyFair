@@ -2,7 +2,9 @@ import React, { Component } from "react";
 
 import "./transactionInfo.css";
 import TransactionForm from "./transactionForm";
-
+const footerStyle = {
+    float: "right"
+  };
 class transactionInfo extends Component {
 	render() {
 		return (
@@ -17,6 +19,13 @@ class transactionInfo extends Component {
                     <p>Specify the amount to be sent or received.</p>
                     <TransactionForm />
                 </div>
+             
+                <ul className="footerTransaction">
+                    <li>&copy; 2016 CurrencyFair</li>
+                    <li style={footerStyle}><a href="/">Help & Support</a></li>
+                    <li style={footerStyle}><a href="/">Legal Stuff</a></li>
+                </ul>
+              
 			</div>
 		);
 	}

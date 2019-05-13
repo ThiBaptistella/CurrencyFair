@@ -1,16 +1,28 @@
 import React, { Component } from "react";
+import Select from 'react-select';
 
 import "./transactionInfo.css";
+
+const options = [
+  { value: 'euro', label: 'Euro' },
+  { value: 'dollar', label: 'Dollar' }
+];
 
 class TransactionForm extends Component {
 	constructor(props) {
         super(props);
         this.state = {
             youSend: "",
-            receiverGets: ""
+            receiverGets: "",
+            selectedOption: null,
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     } 
+
+    handleChange = (selectedOption) => {
+      this.setState({ selectedOption });
+      console.log(`Option selected:`, selectedOption);
+    }
         
     handleSubmit(e){
         e.preventDefault();
@@ -20,20 +32,38 @@ class TransactionForm extends Component {
     }
 
       render() {
+        const { selectedOption } = this.state;
         return (
           <form onSubmit={this.handleSubmit}>
-            {/* <input className="youSend" name="youSend" type="text"/>
-            <input className="receiverGets" name="receiverGets" type="text"/> */}
             <div class="field">
                 <input type="text" name="youSend" id="youSend" placeholder="$1000" />
                 <label for="youSend">You Send</label>
+                <div className="flag-container">
+                  <select className="flag">
+                    <option value="volvo">Euro</option>
+                    <option value="saab">Dollar</option>
+                  </select>
+                </div>
             </div>
                 
             <div class="field">
                 <input type="text" name="receiverGets" id="receiverGets" placeholder="£1000" />
                 <label for="receiverGets">receiver gets</label>
+                <div className="flag-container">
+                  <select className="flag">
+                    <option value="volvo">Euro</option>
+                    <option value="saab">Dollar</option>
+                  </select>
+                </div>
             </div>
-            <button className="btn-next">Next</button>
+           
+    
+              
+         
+            <div class="field">
+              <button className="btn-next">Next</button>
+            </div>
+            
           </form>
         );
     }
