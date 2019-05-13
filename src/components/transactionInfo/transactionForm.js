@@ -35,9 +35,9 @@ class TransactionForm extends Component {
         const { selectedOption } = this.state;
         return (
           <form onSubmit={this.handleSubmit}>
-            <div class="field">
+            <div className="field">
                 <input type="text" name="youSend" id="youSend" placeholder="$1000" />
-                <label for="youSend">You Send</label>
+                <label htmlFor="youSend">You Send</label>
                 <div className="flag-container">
                   <select className="flag">
                     <option value="volvo">Euro</option>
@@ -46,9 +46,9 @@ class TransactionForm extends Component {
                 </div>
             </div>
                 
-            <div class="field">
+            <div className="field">
                 <input type="text" name="receiverGets" id="receiverGets" placeholder="£1000" />
-                <label for="receiverGets">receiver gets</label>
+                <label htmlFor="receiverGets">receiver gets</label>
                 <div className="flag-container">
                   <select className="flag">
                     <option value="volvo">Euro</option>
@@ -60,7 +60,7 @@ class TransactionForm extends Component {
     
               
          
-            <div class="field">
+            <div className="field">
               <button className="btn-next">Next</button>
             </div>
             

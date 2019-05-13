@@ -1,4 +1,88 @@
 .sendDetails {
-    margin-right: 15%; 
-    margin-top: 20%; 
+    margin-right: 15%;
+    margin-top: 20%;
+    margin-left: 15%;
+}
+.titleSend {
+    font-size: 11px;
+    text-align: left;
+    padding: 1px 10px;
+    color: #8b8b8b;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #ebebeb6b;
+}
+
+.youSendDetails {
+    font-size: 11px;
+    font-weight: 500;
+    text-align: left;
+    padding: 17px 10px;
+    color: #8b8b8b;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+.youSendDetails p {
+    width: 50%;
+    float: left;
+}
+.value {
+    width: 50%;
+    float: right;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.receivingDetails {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
+    padding: 17px 10px;
+    color: #8b8b8b;
+    border: 1px solid #ccc;
+    background-color: #ebebeb6b;
+}
+
+.receivingDetails  a{
+    font-size: 11px;
+    font-weight: 500;
+    color: #67bae0;
+    text-decoration: none;
+    float: right;
+}
+.rateDetails {
+    font-size: 11px;
+    font-weight: 500;
+    text-align: left;
+    padding: 17px 10px;
+    color: #8b8b8b;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.rateValues{
+    line-height: 2;
+}
+.values {
+    font-size: 12px;
+    float: right;
+    font-weight: 600;
+    opacity: 0.8;
+}
+.valuesPrice{
+    font-size: 12px;
+    font-weight: 900;
+    float: right;
+    color: #717171;
+}
+.bank {
+    font-size: 11px;
+    font-weight: 500;
+    text-align: center;
+    padding: 17px 10px;
+    color: #eee12b;
+    border: 1px solid #ccc;
+    border-top: none;
 }
