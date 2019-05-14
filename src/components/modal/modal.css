@@ -5,7 +5,7 @@
     transition: all .8s;
     position: absolute;
     border-radius: 4px; 
-    width: 50%;
+    width: 45%;
 }
 
 .modal-header {
@@ -17,14 +17,14 @@
 }
 
 .modal-header h3 {
-    color: #868686;
+    color: #a8b5ba;
     float: left;
     margin: 0;
     padding: 0;
     font-size: 15px;
 }
 .modal-header p {
-    color: #8b8b8b;
+    color: #c3c5ca;
     float: left;
     margin: 0;
     padding: 12px 0px;
@@ -38,9 +38,11 @@
 }
 
 .modal-footer {
-    background: #263238;
-    height: 35px;
-    padding: 15px;
+    background: #ffffff;
+    height: 70px;
+    padding: 22px;
+    text-align: right;
+    border: 1px solid #ccc;
 }
 
 .close-modal-btn {
@@ -51,28 +53,31 @@
     margin: 0;
 }
 
-.close-modal-btn:hover {
-    color: black;
-}
 
 .btn-cancel, .btn-continue {
-    background: coral;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    outline: none;
-    padding: 10px;
+    color: #ffffff;
+    padding: 8px 15px;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #67bbe0;
+    border: 1px solid #c3c5ca;
+    border-radius: 3px;
+    float: left;   
+    margin: 15px 10px;
+    width: 70px;
 }
 
 .btn-cancel {
-    background-color: #b71c1c;
+    background-color: #ebebeb;
     float: left;
+    color: #868686
+
 }
 
 .btn-continue {
-    background-color: #1b5e20;
-    float: right;
+    background-color: #67bbe0;
+    float: left;
+    width: 126px;
 }
 
 .back-drop {
@@ -89,4 +94,12 @@
     margin: 15px;
     padding: 10px;
     font-weight: bold;
+}
+.access {
+    color: #67bae0;
+    text-decoration: none;
+    float: right;
+    margin: 20px 10px;
+    font-size: 12px;
+    font-weight: 700;
 }

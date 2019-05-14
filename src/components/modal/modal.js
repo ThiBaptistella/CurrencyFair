@@ -13,16 +13,17 @@ const modal = (props) => {
                 <div className="modal-header">
                     <h3>Identify verification required</h3>
                     <p>For your security, we ocassionally require you to verify your identify by entering a code sent to your mobile device.</p>
-                    <span className="close-modal-btn" onClick={props.close}>×</span>
+            
                 </div>
                 <div className="modal-body">
-                    <p>
+                    
                         {props.children}
-                    </p>
+                
                 </div>
                 <div className="modal-footer">
-                    <button className="btn-cancel" onClick={props.close}>CLOSE</button>
-                    <button className="btn-continue">CONTINUE</button>
+                    <button className="btn-continue">Verify Indentify</button>
+                    <button className="btn-cancel" onClick={props.close}>Back</button>
+                    <a className="access" href="/">I can't access this mobile device</a>
                 </div>
             </div>
         

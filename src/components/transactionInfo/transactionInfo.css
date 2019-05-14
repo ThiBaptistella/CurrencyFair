@@ -177,3 +177,67 @@ input:focus + label {
  
 }
 
+.code-container {
+  padding: 30px 55px;
+}
+
+.code-container p{
+  font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    padding: 5px;
+}
+.prefix {
+  border: 1px solid #c3c5ca;
+  background-color: #ebebeb;
+  border-radius: 3px;
+  padding: 3px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.phone {
+  border: 1px solid #c3c5ca;
+  background-color: #ebebeb;
+  border-radius: 3px;
+  padding: 3px;
+  margin-left: 2px; 
+  font-size: 14px;
+  font-weight: 500;
+}
+.code{
+  width: 50px;
+    height: 50px;
+  border: 1px solid #c3c5ca;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.code:focus {
+  outline: 0;
+  border: 1px solid #67bbe0;
+  background-color: #ffffff;
+}
+
+.newCode {
+  font-size: 13px;
+  font-weight: 700;
+  float: left;
+  color: #939fa5;
+  text-decoration: none;
+  width: 50%;
+  text-align: left;
+}
+.callCode {
+  font-size: 13px;
+  font-weight: 700;
+  float: left;
+  color: #939fa5;
+  text-decoration: none;
+  width: 50%;
+  text-align: right;
+}
+.receive-container {
+  padding: 25px;
+}
