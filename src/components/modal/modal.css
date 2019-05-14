@@ -2,29 +2,39 @@
     background: white;
     border: 1px solid #d0cccc;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
-    margin: 100px auto 0;
     transition: all .8s;
-    width: 60%;
+    position: absolute;
+    border-radius: 4px; 
+    width: 50%;
 }
 
 .modal-header {
-    background: #263238;
-    height: 40px;
-    line-height: 40px;
-    padding: 5px 20px;
+    background: #ffffff;
+    height: 70px;
+    padding: 22px;
     text-align: right;
+    border: 1px solid #ccc;
 }
 
 .modal-header h3 {
-    color: white;
+    color: #868686;
     float: left;
     margin: 0;
     padding: 0;
+    font-size: 15px;
+}
+.modal-header p {
+    color: #8b8b8b;
+    float: left;
+    margin: 0;
+    padding: 12px 0px;
+    font-size: 12px;
 }
 
 .modal-body {
     padding: 10px 15px;
     text-align: center;
+    background: #f3f3f3;
 }
 
 .modal-footer {
@@ -71,6 +81,8 @@
     position: fixed;
     transition: all 1.3s;
     width: 100%;
+    top: 0;
+    left: 0;
 }
 
 .open-modal-btn {

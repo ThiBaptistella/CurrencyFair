@@ -4,14 +4,15 @@ import './modal.css';
 
 const modal = (props) => {
     return (
-        <div>
+       
             <div className="modal-wrapper"
                 style={{
-                    transform: props.show ? 'translateY(0vh)' : 'translateY(-100vh)',
+                    transform: props.show ? 'translateY(-36vh) translateX(25vh)' : 'translateY(-100vh)',
                     opacity: props.show ? '1' : '0'
                 }}>
                 <div className="modal-header">
-                    <h3>Modal Header</h3>
+                    <h3>Identify verification required</h3>
+                    <p>For your security, we ocassionally require you to verify your identify by entering a code sent to your mobile device.</p>
                     <span className="close-modal-btn" onClick={props.close}>×</span>
                 </div>
                 <div className="modal-body">
@@ -24,7 +25,7 @@ const modal = (props) => {
                     <button className="btn-continue">CONTINUE</button>
                 </div>
             </div>
-        </div>
+        
     )
 }
 

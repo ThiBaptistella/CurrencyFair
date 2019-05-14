@@ -46,6 +46,7 @@ class TransactionForm extends Component {
       render() {
         const { selectedOption } = this.state;
         return (
+          <div>
           <form onSubmit={this.handleSubmit}>
             <div className="field">
                 <input type="text" name="youSend" id="youSend" placeholder="$1000" />
@@ -69,24 +70,25 @@ class TransactionForm extends Component {
                 </div>
             </div>
 
-            <div>
-            { this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null }
-
-<button className="open-modal-btn" onClick={this.openModalHandler}>Open Modal</button>
-
-<Modal
-    className="modal"
-    show={this.state.isShowing}
-    close={this.closeModalHandler}>
-        Maybe aircrafts fly very high because they don't want to be seen in plane sight?
-</Modal>
-            </div>
+         
+            
+            
            
             <div className="field">
-              <button className="btn-next">Next</button>
+              <button className="btn-next" onClick={this.openModalHandler}>Next</button>
             </div>
             
           </form>
+         { this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null }
+
+            
+          <Modal
+          className="modal"
+              show={this.state.isShowing}
+              close={this.closeModalHandler}>
+                  Maybe aircrafts fly very high because they don't want to be seen in plane sight?
+          </Modal></div>
+          
         );
     }
 }
