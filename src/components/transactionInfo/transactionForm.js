@@ -43,8 +43,8 @@ class TransactionForm extends Component {
     }
     handleSubmit(e){
         e.preventDefault();
-        this.setState({ [e.target.name]: e.target.value }, () => { console.log(this.state.name) })
-        //Send state to the server code
+        this.setState({ [e.target.name]: e.target.value }, () => { console.log("this.state", this.state); })
+        console.log("this.state", this.state);
 
     }
 
@@ -71,7 +71,11 @@ class TransactionForm extends Component {
                 </div>
             </div>
             <div className="field">
-                <input type="text" name="receiverGets" id="receiverGets" placeholder="$1000" onChange={this.handleInput} value={this.state.currency} />
+                <input type="text" name="receiverGets" id="receiverGets" placeholder="$1000" onChange={(e) => {
+                  this.handleInput({
+                    currency: e.target.value
+                  })
+                } } value={this.state.currency}/>
                 <label htmlFor="receiverGets">receiver gets</label>
                 <div className="flag-container">
                   <select 
