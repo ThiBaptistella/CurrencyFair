@@ -34,7 +34,7 @@ class TransactionForm extends Component {
     }
     handleInput(e) {
       this.setState({ ...e }, () => {
-        this.props.onChangeData(this.state);
+        console.log("this.state", this.state);
         
       });
     }

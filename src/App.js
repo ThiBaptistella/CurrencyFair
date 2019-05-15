@@ -23,19 +23,17 @@ class App extends Component {
   simpleAction = (event) => {
     this.props.simpleAction();
   }
-  onChangeData = (value) => { 
-    console.log("value", value)  
-  }
+
   render() {
     return (
       <div className="App">
           <NavBar />
           <div className="container">
             <div className="left-content"> 
-              <TransactionInfo  />
+            <TransactionInfo />
             </div>
             <div className="right-content"> 
-              <SendDetails onChangeData={this.onChangeData} />
+            <SendDetails />
             </div>
           </div>
       </div>
