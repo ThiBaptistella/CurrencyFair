@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Select from 'react-select';
 
 import "./transactionInfo.css";
 
@@ -9,61 +8,57 @@ class TransactionForm extends Component {
 	constructor(props) {
         super(props);
         this.state = {
-            currency: "",
+            currencyYouSend: "",
+            currencyReceiverGets:"",
             youSend: "",
             receiverGets: "",
             selectedOption: null,
             isShowing: false
         }
-        this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleInput = this.handleInput.bind(this);
     } 
-    // openModalHandler = () => {
-    //   this.setState({
-    //       isShowing: true
-    //   });
-    // }
-    // closeModalHandler = () => {
-    //   this.setState({
-    //       isShowing: false
-    //   });
-    // }
-    handleChange = (e) => {
-      this.handleInput({
-        currency: e.target.value
-      })
+    openModalHandler = (e) => {
+      e.preventDefault();
+      this.setState({
+          isShowing: true
+      });
     }
-       
+    closeModalHandler = () => {
+      this.setState({
+          isShowing: false
+      });
+    }
+    handleChange = (e) => {
+      this.handleInput({ [e.target.name]: e.target.value }, () => { console.log(this.state); })
+
+    }
     handleInput(e) {
       this.setState({ ...e }, () => {
         console.log("this.state", this.state);
         
       });
     }
-    handleSubmit(e){
-        e.preventDefault();
-        this.setState({ [e.target.name]: e.target.value }, () => { console.log("this.state", this.state); })
-        console.log("this.state", this.state);
 
-    }
 
       render() {
         return (
           <div>
-          <form onSubmit={this.handleSubmit}>
+          <form>
             <div className="field">
-                <input type="text" name="youSend" id="youSend" placeholder="$1000"   onChange={(e) => {
+              <input type="text" name="youSend" id="youSend" placeholder="$1000" value={this.state.currencyYouSend} onChange={(e) => {
                   this.handleInput({
-                    currency: e.target.value
+                    currencyYouSend: e.target.value,
+                    youSend: e.target.value
                   })
-                } } value={this.state.currency}/>
+                } } />
 
               <label htmlFor="youSend">You Send</label>
                 <div className="flag-container">
                   <select 
                     onChange={this.handleChange}
                     className="flag"
+                    name="currencyYouSend"
                   >
                     <option value="£">£</option>
                     <option value="$">$</option>
@@ -71,27 +66,24 @@ class TransactionForm extends Component {
                 </div>
             </div>
             <div className="field">
-                <input type="text" name="receiverGets" id="receiverGets" placeholder="$1000" onChange={(e) => {
+                <input type="text" name="receiverGets" id="receiverGets" placeholder="$1000" value={this.state.currencyReceiverGets} onChange={(e) => {
                   this.handleInput({
-                    currency: e.target.value
+                    currencyReceiverGets: e.target.value,
+                    receiverGets: e.target.value
                   })
-                } } value={this.state.currency}/>
+                } }/>
                 <label htmlFor="receiverGets">receiver gets</label>
                 <div className="flag-container">
                   <select 
                     onChange={this.handleChange}
                     className="flag"
+                    name="currencyReceiverGets"
                   >
                     <option value="£">£</option>
                     <option value="$">$</option>
                   </select>
                 </div>
             </div>
-
-         
-            
-            
-           
             <div className="field">
               <button className="btn-next" onClick={this.openModalHandler}>Next</button>
             </div>
@@ -99,8 +91,7 @@ class TransactionForm extends Component {
           </form>
          { this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null }
 
-            
-          {/* <Modal
+          <Modal
               show={this.state.isShowing}
               close={this.closeModalHandler}>
                 <div className="code-container">
@@ -116,9 +107,7 @@ class TransactionForm extends Component {
                     <a className="callCode" href="/">Receive code via call instead</a>
                   </div>
                 </div>
-                 
-
-          </Modal> */}
+          </Modal>
           </div>
           
         );
