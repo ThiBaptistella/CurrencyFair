@@ -11,7 +11,7 @@ class sendDetails extends Component {
 				</div>
 				<div className="youSendDetails">
 					<span>You send</span>
-					<span className="value">{this.props.currency}£ 3000</span>
+					<span className="value">{this.props.currencyYouSend}£ 3000</span>
 				</div>
 				<div className="receivingDetails">
 					<span>Receiving details</span>

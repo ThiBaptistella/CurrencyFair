@@ -31,11 +31,10 @@ class TransactionForm extends Component {
     }
     handleChange = (e) => {
       this.handleInput({ [e.target.name]: e.target.value }, () => { console.log(this.state); })
-
     }
     handleInput(e) {
       this.setState({ ...e }, () => {
-        console.log("this.state", this.state);
+        this.props.onChangeData(this.state);
         
       });
     }

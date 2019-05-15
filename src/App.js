@@ -23,30 +23,21 @@ class App extends Component {
   simpleAction = (event) => {
     this.props.simpleAction();
   }
-
+  onChangeData = (value) => { 
+    console.log("value", value)  
+  }
   render() {
     return (
       <div className="App">
           <NavBar />
           <div className="container">
             <div className="left-content"> 
-              <TransactionInfo />
+              <TransactionInfo  />
             </div>
             <div className="right-content"> 
-              <SendDetails />
+              <SendDetails onChangeData={this.onChangeData} />
             </div>
           </div>
-
-        {/* <pre>
-          {
-            JSON.stringify(this.props)
-          }
-        </pre>
-        <button onClick={this.simpleAction}>Test redux action</button>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-         */}
       </div>
     );
   }

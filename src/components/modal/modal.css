@@ -5,7 +5,11 @@
     transition: all .8s;
     position: absolute;
     border-radius: 4px; 
+    min-width: 45%;
     width: 45%;
+    top: 0;
+    left: 0;
+    max-width: 100%;
 }
 
 .modal-header {
